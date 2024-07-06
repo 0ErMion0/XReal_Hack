@@ -27,4 +27,7 @@ public static class Define
     // Ch5
     public const string ch5KnockingVfx = "ch5_knocking";
     public const string ch5SelectSeatVfx = "ch5_select_seat";
+
+    // Ch6
+    public const string ch6ClockVfx = "ch6_clock";
 }

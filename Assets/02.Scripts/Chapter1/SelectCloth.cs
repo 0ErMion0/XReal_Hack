@@ -255,10 +255,10 @@ public class SelectCloth : MonoBehaviour
         textImg.SetActive(true);
 
         // 점수 넘기기
-        ScoreMng.main.addScore(scoreTops[currentTopIndex]);
-        ScoreMng.main.addScore(scoreAccessorys[currentAccessoryIndex]);
-        ScoreMng.main.addScore(scorePants[currentPantsIndex]);
-        ScoreMng.main.addScore(scoreShoes[currentShoesIndex]);
+        ScoreMng.main.addScore(scoreTops[currentTopIndex], "Chapter1");
+        ScoreMng.main.addScore(scoreAccessorys[currentAccessoryIndex], "Chapter1");
+        ScoreMng.main.addScore(scorePants[currentPantsIndex], "Chapter1");
+        ScoreMng.main.addScore(scoreShoes[currentShoesIndex], "Chapter1");
 
         Speech();
     }
