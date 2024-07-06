@@ -23,10 +23,10 @@ public class SelectCloth : MonoBehaviour
     public Sprite[] arg_pants;
     public Sprite[] arg_shoes;
 
-    int[] scoreTops = { 25, 10, 0, 5 };
-    int[] scoreAccessorys = { 25, 10, 0, 5 };
-    int[] scorePants = {25, 0, 10, 5};
-    int[] scoreShoes = {25, 5, 10, 0};
+    int[] scoreTops = { 10, 25 };
+    int[] scoreAccessorys = { 0,25,10};
+    int[] scorePants = { 10, 25 };
+    int[] scoreShoes = {0,25};
 
 
     // 선택된 UI 인덱스
@@ -43,7 +43,8 @@ public class SelectCloth : MonoBehaviour
     void Start()
     {
         closetButtons.SetActive(false);
-        idCard.GetComponent<XRGrabInteractable>().enabled = true;
+        idCard.SetActive(false);
+        //idCard.GetComponent<XRGrabInteractable>().enabled = true;
 
         // 대사 시작
         Speech();
@@ -54,11 +55,11 @@ public class SelectCloth : MonoBehaviour
     // 대사
     void Speech()
     {
+        textImg.SetActive(true);
         switch (speechIndex)
         {
             case 0:
-                tmp.text = "hello?!";
-                //tmp.text = "오늘은 어떻게 입을까?"; // <- 이거로 변경하기
+                tmp.text = "오늘은 어떻게 입을까?"; // <- 이거로 변경하기
 
                 //SoundManager._instance.PlaySound(Define.ch2RunningFootVfx); // 변경 필요 test 용
                 ////StartCoroutine(WaitForSpeech(Define.ch2RunningFootVfx));
@@ -76,8 +77,7 @@ public class SelectCloth : MonoBehaviour
                 //textImg.SetActive(false);
                 break;
             case 1:
-                //tmp.text = "아차차! 사원증 챙겨야지";
-                tmp.text = "case2";
+                tmp.text = "아차차! 사원증 챙겨야지";
                 SoundManager._instance.PlaySoundCor(Define.ch2RunningFootVfx, OnSpeechComplete1);
                 speechIndex = 0;
 
@@ -113,7 +113,8 @@ public class SelectCloth : MonoBehaviour
     {
         // 자막 비활성화 & 사원증 그랩 활성화
         textImg.SetActive(false);
-        idCard.GetComponent<XRGrabInteractable>().enabled = true;
+        idCard.SetActive(true);
+        //idCard.GetComponent<XRGrabInteractable>().enabled = true;
     }
 
     private void UpdateDisplay()
