@@ -14,6 +14,8 @@ public class Chapter2Sys : MonoBehaviour
     [SerializeField] private float duration = 5.0f;
     [SerializeField] private Transform clearPosition;
     [SerializeField] public List<Collider> btnCols;
+    [SerializeField] private Animator bojangAnim;
+    [SerializeField] private Transform playerPos;
 
     private void Awake()
     {
@@ -36,22 +38,39 @@ public class Chapter2Sys : MonoBehaviour
     {
         // 시작 위치 저장
         Vector3 startPosition = objectTransform.position;
+        // 초기 y 좌표 저장
+        float initialY = startPosition.y;
+
         // 경과 시간 초기화
         float elapsedTime = 0f;
+        bojangAnim.SetBool("Run", true);
 
         while (elapsedTime < duration)
         {
             // 경과 시간 업데이트
             elapsedTime += Time.deltaTime;
-            // 비율 계산
+            // 보간 비율 계산
             float t = elapsedTime / duration;
-            // Lerp를 사용하여 위치 보간
-            objectTransform.position = Vector3.Lerp(startPosition, target, t);
+
+            // x와 z 좌표 보간, y는 고정
+            float newX = Mathf.Lerp(startPosition.x, target.x, t);
+            float newZ = Mathf.Lerp(startPosition.z, target.z, t);
+
+            // 새로운 위치 설정
+            Vector3 newPosition = new Vector3(newX, initialY, newZ);
+            objectTransform.position = newPosition;
+
+            // 목표 위치 바라보기
+            objectTransform.LookAt(new Vector3(target.x, initialY, target.z));
+
             // 다음 프레임까지 대기
             yield return null;
         }
-        objectTransform.position = target;
-        
+
+        // 최종 위치 설정
+        objectTransform.position = new Vector3(target.x, initialY, target.z);
+
+        // 완료 콜백 호출
         onComplete?.Invoke();
     }
 
@@ -59,18 +78,24 @@ public class Chapter2Sys : MonoBehaviour
     {
         if (isTriggerEnter&&isClear)
         {
-            StartCoroutine(MoveObject(directorObj.transform, clearPosition.position, 1.0f, null));
+            bojangAnim.SetBool("Run",false);
+            bojangAnim.SetBool("Walk",true);
+            StartCoroutine(MoveObject(directorObj.transform, clearPosition.position, 1.0f, EndPointReached));
             EndScene();
             //스코어 100
         }
         else if(isTriggerEnter&&!isClear)
         {
+            bojangAnim.SetBool("Run",false);
+            bojangAnim.SetBool("Angry",true);
             Debug.Log("Chapter 2 is not clear.");
             EndScene();
             //스코어 0
         }
         else if (!isTriggerEnter)
         {
+            bojangAnim.SetBool("Run",false);
+            bojangAnim.SetBool("Angry",true);
             Debug.Log("아무것도 안함");
             EndScene();
             //스코어 50
@@ -83,5 +108,15 @@ public class Chapter2Sys : MonoBehaviour
         {
             collider.enabled = false;
         }
+    }
+
+    private void Update()
+    {
+       
+    }
+    private void EndPointReached()
+    {
+        bojangAnim.SetBool("LastIdle", true);
+        directorObj.transform.LookAt(playerPos);
     }
 }
