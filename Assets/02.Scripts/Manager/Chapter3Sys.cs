@@ -69,13 +69,13 @@ public class Chapter2Sys : MonoBehaviour
 
         // 최종 위치 설정
         objectTransform.position = new Vector3(target.x, initialY, target.z);
-
         // 완료 콜백 호출
         onComplete?.Invoke();
     }
 
     private void ClearChapter2Scene()
     {
+        SoundManager._instance.PlaySound(Define.doorClose);
         if (isTriggerEnter&&isClear)
         {
             bojangAnim.SetBool("Run",false);
@@ -109,13 +109,9 @@ public class Chapter2Sys : MonoBehaviour
             collider.enabled = false;
         }
     }
-
-    private void Update()
-    {
-       
-    }
     private void EndPointReached()
     {
+        SoundManager._instance.PlaySound(Define.correctSound);
         bojangAnim.SetBool("LastIdle", true);
         directorObj.transform.LookAt(playerPos);
     }
