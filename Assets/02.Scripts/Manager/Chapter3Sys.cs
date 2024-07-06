@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chapter2Sys : MonoBehaviour
 {
@@ -83,6 +84,11 @@ public class Chapter2Sys : MonoBehaviour
             StartCoroutine(MoveObject(directorObj.transform, clearPosition.position, 1.0f, EndPointReached));
             EndScene();
             //스코어 100
+            // 점수 넘기기
+            ScoreMng.main.addScore(100, "Chapter3");
+
+            // 씬 전환
+            //Invoke(nameof(ChangeScene), 3f);
         }
         else if(isTriggerEnter&&!isClear)
         {
@@ -91,6 +97,9 @@ public class Chapter2Sys : MonoBehaviour
             Debug.Log("Chapter 2 is not clear.");
             EndScene();
             //스코어 0
+
+            // 씬 전환
+            //Invoke(nameof(ChangeScene), 3f);
         }
         else if (!isTriggerEnter)
         {
@@ -99,8 +108,13 @@ public class Chapter2Sys : MonoBehaviour
             Debug.Log("아무것도 안함");
             EndScene();
             //스코어 50
+            ScoreMng.main.addScore(50, "Chapter3");
+
+            // 씬 전환
+            //Invoke(nameof(ChangeScene), 3f);
         }
-        
+        // 씬 전환
+        //Invoke(nameof(ChangeScene), 3f);
     }
     public void EndScene()
     {
@@ -114,5 +128,14 @@ public class Chapter2Sys : MonoBehaviour
         SoundManager._instance.PlaySound(Define.correctSound);
         bojangAnim.SetBool("LastIdle", true);
         directorObj.transform.LookAt(playerPos);
+
+        // 씬 전환
+        //Invoke(nameof(ChangeScene), 3f);
+    }
+
+    // 씬 전환
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Chapter4");
     }
 }

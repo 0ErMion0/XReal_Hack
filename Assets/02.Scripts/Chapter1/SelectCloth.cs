@@ -273,7 +273,7 @@ public class SelectCloth : MonoBehaviour
     // ¾À ÀüÈ¯
     void ChangeScene()
     {
-        Debug.Log("¾À ÀüÈ¯");
-        //SceneManager.LoadScene("MainTitle");
+        //Debug.Log("¾À ÀüÈ¯");
+        SceneManager.LoadScene("Chapter3");
     }
 }

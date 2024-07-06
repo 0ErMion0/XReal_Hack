@@ -42,7 +42,7 @@ public class SetScore : MonoBehaviour
     void getScore()
     {
         ch1Tmp.text = ScoreMng.main.ch1Score.ToString() + "만원";
-        ch2Tmp.text = ScoreMng.main.ch2Score.ToString() + "만원";
+        ch2Tmp.text = ScoreMng.main.ch3Score.ToString() + "만원";
         ch4Tmp.text = ScoreMng.main.ch4Score.ToString() + "만원";
         ch5Tmp.text = ScoreMng.main.ch5Score.ToString() + "만원";
         totalTmp.text = ScoreMng.main.totalScore.ToString() + "만원";

@@ -8,7 +8,7 @@ public class ScoreMng : MonoBehaviour
 
     public int totalScore = 0;
     public int ch1Score = 0;
-    public int ch2Score = 0;
+    public int ch3Score = 0;
     public int ch4Score = 0;
     public int ch5Score = 0;
 
@@ -41,9 +41,9 @@ public class ScoreMng : MonoBehaviour
             ch1Score += getScore;
         }
 
-        if(chName == "Chapter2")
+        if(chName == "Chapter3")
         {
-            ch2Score += getScore;
+            ch3Score += getScore;
         }
 
         if (chName == "Chapter4")
