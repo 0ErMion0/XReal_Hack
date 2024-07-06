@@ -74,5 +74,22 @@ public class SoundManager : MonoBehaviour
     public void ClearLoadedAudioClip() => _loadedClip.Clear();
     public void StopSound() => _soundSource.Stop();
 
+    // 대사용 코루틴 추가
+    public void PlaySoundCor(string path, System.Action onComplete = null)
+    {
+        AudioClip clip = LoadAudioClip(GetSoundFullPath(path));
+        if (clip == null)
+            return;
+
+        _soundSource.PlayOneShot(clip);
+        StartCoroutine(InvokeOnComplete(clip.length, onComplete));
+    }
+
+    private IEnumerator InvokeOnComplete(float clipLength, System.Action onComplete)
+    {
+        yield return new WaitForSeconds(clipLength);
+        onComplete?.Invoke();
+    }
+
     #endregion
 }
