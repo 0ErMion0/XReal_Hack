@@ -67,7 +67,7 @@ public class SelectCloth : MonoBehaviour
                 //AudioClip clip = Resources.Load<AudioClip>(Define.ch2RunningFootVfx);
                 //StartCoroutine(WaitForSpeech(clip));
 
-                SoundManager._instance.PlaySoundCor(Define.ch2RunningFootVfx, OnSpeechComplete0);
+                SoundManager._instance.PlaySoundCor(Define.ch1Conversation_1, OnSpeechComplete0);
                 //OnSpeechComplete0();
 
                 speechIndex++;
@@ -78,7 +78,7 @@ public class SelectCloth : MonoBehaviour
                 break;
             case 1:
                 tmp.text = "아차차! 사원증 챙겨야지";
-                SoundManager._instance.PlaySoundCor(Define.ch2RunningFootVfx, OnSpeechComplete1);
+                SoundManager._instance.PlaySoundCor(Define.ch1Conversation_2, OnSpeechComplete1);
                 speechIndex = 0;
 
                 // 사원증 활성화
@@ -131,7 +131,8 @@ public class SelectCloth : MonoBehaviour
     // 상의 변경 버튼
     public void OnClickShowPreviousTop()
     {
-        Debug.Log("버튼 클릭");
+        //Debug.Log("버튼 클릭");
+        SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
         currentTopIndex--;
         if(currentTopIndex < 0)
         {
@@ -142,6 +143,7 @@ public class SelectCloth : MonoBehaviour
 
     public void OnClickShowNextTop()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
         currentTopIndex++;
         if (currentTopIndex >= arg_tops.Length)
         {
@@ -153,6 +155,7 @@ public class SelectCloth : MonoBehaviour
     // 악세사리 변경 버튼
     public void OnClickShowPreviousAccessory()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
         currentAccessoryIndex--;
         if (currentAccessoryIndex < 0)
         {
@@ -163,6 +166,7 @@ public class SelectCloth : MonoBehaviour
 
     public void OnClickShowNextAccessory()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
         currentAccessoryIndex++;
         if (currentAccessoryIndex >= arg_accessory.Length)
         {
@@ -206,6 +210,7 @@ public class SelectCloth : MonoBehaviour
     // 하의 변경 버튼
     public void OnClickShowPreviousPants()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
         currentPantsIndex--;
         if (currentPantsIndex < 0)
         {
@@ -216,6 +221,7 @@ public class SelectCloth : MonoBehaviour
 
     public void OnClickShowNextPants()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
         currentPantsIndex++;
         if (currentPantsIndex >= arg_pants.Length)
         {
@@ -228,6 +234,7 @@ public class SelectCloth : MonoBehaviour
     // 신발 변경 버튼
     public void OnClickShowPreviousShoes()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
         currentShoesIndex--;
         if (currentShoesIndex < 0)
         {
@@ -238,6 +245,7 @@ public class SelectCloth : MonoBehaviour
 
     public void OnClickShowNextShoes()
     {
+        SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
         currentShoesIndex++;
         if (currentShoesIndex >= arg_shoes.Length)
         {
