@@ -12,6 +12,7 @@ public class SelectCloth : MonoBehaviour
     [SerializeField] GameObject closetButtons;
     [SerializeField] GameObject textImg;
     [SerializeField] GameObject idCard;
+    [SerializeField] GameObject exmImg;
     
     public Image displayTop;
     public Image displayAccessory;
@@ -42,6 +43,8 @@ public class SelectCloth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(exp());
+        
         closetButtons.SetActive(false);
         idCard.SetActive(false);
         //idCard.GetComponent<XRGrabInteractable>().enabled = true;
@@ -50,6 +53,13 @@ public class SelectCloth : MonoBehaviour
         Speech();
 
        //UpdateDisplay();
+    }
+
+    private IEnumerator exp()
+    {
+        exmImg.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        exmImg.SetActive(false);
     }
 
     // ด๋ป็
