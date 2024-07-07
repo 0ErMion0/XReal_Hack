@@ -74,7 +74,7 @@ public class SoundManager : MonoBehaviour
     public void ClearLoadedAudioClip() => _loadedClip.Clear();
     public void StopSound() => _soundSource.Stop();
 
-    // ´ë»ç¿ë ÄÚ·çÆ¾ Ãß°¡
+    // ëŒ€ì‚¬ìš© ì½”ë£¨í‹´ ì¶”ê°€
     public void PlaySoundCor(string path, System.Action onComplete = null)
     {
         AudioClip clip = LoadAudioClip(GetSoundFullPath(path));

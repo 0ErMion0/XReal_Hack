@@ -28,27 +28,30 @@ public class ChairSelector : MonoBehaviour
         currentPplIndex = Chapter5Sys.instance5.currentPersonIndex;
     }
 
-    // ¿«¿⁄ ø¿∫Í¡ß∆Æ∞° º±≈√µ«æ˙¿ª ∂ß »£√‚µ… ∏ﬁº≠µÂ
-    public void OnChairSelected()
-    {
-        //if (currentPplIndex < 4)
+      // ÏùòÏûê Ïò§Î∏åÏ†ùÌä∏Í∞Ä ÏÑ†ÌÉùÎêòÏóàÏùÑ Îïå Ìò∏Ï∂úÎê† Î©îÏÑúÎìú
+        public void OnChairSelected()
         {
-            // ¿«¿⁄
-            Debug.Log(chairSO.ChairName);
-            Chapter5Sys.instance5.GetChairName(chairSO.ChairName);
-
-            // º±≈√µ» ¿«¿⁄ ø¿∫Í¡ß∆Æ¿« ¿ßƒ° ∞°¡Æø¿±‚
-            Vector3 chairPosition = transform.position;
-            // ªÁ∂˜ ø¿∫Í¡ß∆Æ¿« ¿ßƒ°∏¶ ¿«¿⁄ ø¿∫Í¡ß∆Æ ¿ß∑Œ º≥¡§
-            Vector3 personPosition = chairPosition + Vector3.up * -1.0f; // ¿«¿⁄ ¿ßø° ªÁ∂˜ πËƒ°
-            pplObjs[currentPplIndex].transform.position = personPosition;
-
-            // ªÁ∂˜ ¿Œµ¶Ω∫ ¡ı∞°
-            Chapter5Sys.instance5.ChangeCurrentPersonIndex();
-
-            // º±≈√ ∫“∞°≈‰∑œ ∏∑±‚
-            gameObject.GetComponent<XRGrabInteractable>().enabled = false;
-            headObj.SetActive(false);
+            //if (currentPplIndex < 4)
+            {
+                // ÏùòÏûê
+                Debug.Log(chairSO.ChairName);
+                Chapter5Sys.instance5.GetChairName(chairSO.ChairName);
+    
+                // ÏÑ†ÌÉùÎêú ÏùòÏûê Ïò§Î∏åÏ†ùÌä∏Ïùò ÏúÑÏπò Í∞ÄÏ†∏Ïò§Í∏∞
+                Vector3 chairPosition = transform.position;
+                Quaternion chairRotation = transform.rotation;
+    
+                // ÏÇ¨Îûå Ïò§Î∏åÏ†ùÌä∏Ïùò ÏúÑÏπòÎ•º ÏùòÏûê Ïò§Î∏åÏ†ùÌä∏ ÏúÑÎ°ú ÏÑ§Ï†ï
+                Vector3 personPosition = chairPosition;// + Vector3.up * -1.0f; // ÏùòÏûê ÏúÑÏóê ÏÇ¨Îûå Î∞∞Ïπò
+                pplObjs[currentPplIndex].transform.position = personPosition;
+                pplObjs[currentPplIndex].transform.rotation = chairRotation;
+    
+                // ÏÇ¨Îûå Ïù∏Îç±Ïä§ Ï¶ùÍ∞Ä
+                Chapter5Sys.instance5.ChangeCurrentPersonIndex();
+    
+                // ÏÑ†ÌÉù Î∂àÍ∞ÄÌÜ†Î°ù ÎßâÍ∏∞
+                gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+                headObj.SetActive(false);
+            }
         }
-    }
 }

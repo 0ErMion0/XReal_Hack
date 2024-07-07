@@ -51,7 +51,7 @@ public class Chapter4Sys : MonoBehaviour
         {
             ScoreMng.main.addScore(100,"Chapter4");
         }
-        SceneManager.LoadScene("Chapter6");
+        SceneManager.LoadScene("Chapter5");
 
     }
 }

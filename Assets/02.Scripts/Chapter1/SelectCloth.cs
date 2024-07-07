@@ -29,13 +29,13 @@ public class SelectCloth : MonoBehaviour
     int[] scoreShoes = {0,25};
 
 
-    // ¼±ÅÃµÈ UI ÀÎµ¦½º
+    // ì„ íƒëœ UI ì¸ë±ìŠ¤
     int currentTopIndex = 0;
     int currentAccessoryIndex = 0;
     int currentPantsIndex = 0;
     int currentShoesIndex = 0;
 
-    // ´ë»ç
+    // ëŒ€ì‚¬
     public TMP_Text tmp;
     private int speechIndex = 0;
     
@@ -46,22 +46,22 @@ public class SelectCloth : MonoBehaviour
         idCard.SetActive(false);
         //idCard.GetComponent<XRGrabInteractable>().enabled = true;
 
-        // ´ë»ç ½ÃÀÛ
+        // ëŒ€ì‚¬ ì‹œì‘
         Speech();
 
        //UpdateDisplay();
     }
 
-    // ´ë»ç
+    // ëŒ€ì‚¬
     void Speech()
     {
         textImg.SetActive(true);
         switch (speechIndex)
         {
             case 0:
-                tmp.text = "¿À´ÃÀº ¾î¶»°Ô ÀÔÀ»±î?"; // <- ÀÌ°Å·Î º¯°æÇÏ±â
+                tmp.text = "ì˜¤ëŠ˜ì€ ì–´ë–»ê²Œ ì…ì„ê¹Œ?"; // <- ì´ê±°ë¡œ ë³€ê²½í•˜ê¸°
 
-                //SoundManager._instance.PlaySound(Define.ch2RunningFootVfx); // º¯°æ ÇÊ¿ä test ¿ë
+                //SoundManager._instance.PlaySound(Define.ch2RunningFootVfx); // ë³€ê²½ í•„ìš” test ìš©
                 ////StartCoroutine(WaitForSpeech(Define.ch2RunningFootVfx));
 
                 //AudioClip clip = Resources.Load<AudioClip>(Define.ch2RunningFootVfx);
@@ -72,16 +72,16 @@ public class SelectCloth : MonoBehaviour
 
                 speechIndex++;
 
-                //// ¿Ê °í¸£±â ui ¹öÆ° È°¼ºÈ­ ¹× ÀÚ¸· ºñÈ°¼ºÈ­
+                //// ì˜· ê³ ë¥´ê¸° ui ë²„íŠ¼ í™œì„±í™” ë° ìë§‰ ë¹„í™œì„±í™”
                 //closetButtons.SetActive(true);
                 //textImg.SetActive(false);
                 break;
             case 1:
-                tmp.text = "¾ÆÂ÷Â÷! »ç¿øÁõ Ã¬°Ü¾ßÁö";
+                tmp.text = "ì•„ì°¨ì°¨! ì‚¬ì›ì¦ ì±™ê²¨ì•¼ì§€";
                 SoundManager._instance.PlaySoundCor(Define.ch1Conversation_2, OnSpeechComplete1);
                 speechIndex = 0;
 
-                // »ç¿øÁõ È°¼ºÈ­
+                // ì‚¬ì›ì¦ í™œì„±í™”
 
                 break;
         }
@@ -95,7 +95,7 @@ public class SelectCloth : MonoBehaviour
 
     //    yield return new WaitForSeconds(clip.length);
     //    Debug.Log(clip.length);
-    //    //// ¿Ê °í¸£±â ui ¹öÆ° È°¼ºÈ­ ¹× ÀÚ¸· ºñÈ°¼ºÈ­
+    //    //// ì˜· ê³ ë¥´ê¸° ui ë²„íŠ¼ í™œì„±í™” ë° ìë§‰ ë¹„í™œì„±í™”
     //    //closetButtons.SetActive(true);
     //    //textImg.SetActive(false);
     //}
@@ -104,14 +104,14 @@ public class SelectCloth : MonoBehaviour
     {
         UpdateDisplay();
 
-        // ¿Ê °í¸£±â ui ¹öÆ° È°¼ºÈ­ ¹× ÀÚ¸· ºñÈ°¼ºÈ­
+        // ì˜· ê³ ë¥´ê¸° ui ë²„íŠ¼ í™œì„±í™” ë° ìë§‰ ë¹„í™œì„±í™”
         closetButtons.SetActive(true);
         textImg.SetActive(false);
     }
 
     void OnSpeechComplete1()
     {
-        // ÀÚ¸· ºñÈ°¼ºÈ­ & »ç¿øÁõ ±×·¦ È°¼ºÈ­
+        // ìë§‰ ë¹„í™œì„±í™” & ì‚¬ì›ì¦ ê·¸ë© í™œì„±í™”
         textImg.SetActive(false);
         idCard.SetActive(true);
         //idCard.GetComponent<XRGrabInteractable>().enabled = true;
@@ -128,10 +128,10 @@ public class SelectCloth : MonoBehaviour
         //}
     }
 
-    // »óÀÇ º¯°æ ¹öÆ°
+    // ìƒì˜ ë³€ê²½ ë²„íŠ¼
     public void OnClickShowPreviousTop()
     {
-        //Debug.Log("¹öÆ° Å¬¸¯");
+        //Debug.Log("ë²„íŠ¼ í´ë¦­");
         SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
         currentTopIndex--;
         if(currentTopIndex < 0)
@@ -152,7 +152,7 @@ public class SelectCloth : MonoBehaviour
         UpdateDisplay();
     }
 
-    // ¾Ç¼¼»ç¸® º¯°æ ¹öÆ°
+    // ì•…ì„¸ì‚¬ë¦¬ ë³€ê²½ ë²„íŠ¼
     public void OnClickShowPreviousAccessory()
     {
         SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
@@ -177,13 +177,13 @@ public class SelectCloth : MonoBehaviour
 
     //void OnButtonClicked(Button clickedButton)
     //{
-    //    // ÀÌÀü¿¡ ¼±ÅÃµÈ ¹öÆ°ÀÇ ¼±ÅÃ ÇØÁ¦
+    //    // ì´ì „ì— ì„ íƒëœ ë²„íŠ¼ì˜ ì„ íƒ í•´ì œ
     //    if (selectedButton != null)
     //    {
     //        DeselectButton(selectedButton);
     //    }
 
-    //    // ÇöÀç Å¬¸¯µÈ ¹öÆ°À» ¼±ÅÃ »óÅÂ·Î ¼³Á¤
+    //    // í˜„ì¬ í´ë¦­ëœ ë²„íŠ¼ì„ ì„ íƒ ìƒíƒœë¡œ ì„¤ì •
     //    SelectButton(clickedButton);
     //}
     //void SelectButton(Button button)
@@ -192,7 +192,7 @@ public class SelectCloth : MonoBehaviour
 
     //    //currentAccessoryIndex = button.
 
-    //    //// ¼±ÅÃµÈ ¹öÆ°ÀÇ ½Ã°¢Àû ÇÇµå¹éÀ» ÁÖ±â À§ÇØ »ö»ó º¯°æ (¿¹½Ã)
+    //    //// ì„ íƒëœ ë²„íŠ¼ì˜ ì‹œê°ì  í”¼ë“œë°±ì„ ì£¼ê¸° ìœ„í•´ ìƒ‰ìƒ ë³€ê²½ (ì˜ˆì‹œ)
     //    //ColorBlock colors = button.colors;
     //    //colors.normalColor = Color.green;
     //    //button.colors = colors;
@@ -201,13 +201,13 @@ public class SelectCloth : MonoBehaviour
     //void DeselectButton(Button button)
     //{
 
-    //    //// ¼±ÅÃ ÇØÁ¦µÈ ¹öÆ°ÀÇ ½Ã°¢Àû ÇÇµå¹éÀ» ¿ø·¡´ë·Î º¯°æ (¿¹½Ã)
+    //    //// ì„ íƒ í•´ì œëœ ë²„íŠ¼ì˜ ì‹œê°ì  í”¼ë“œë°±ì„ ì›ë˜ëŒ€ë¡œ ë³€ê²½ (ì˜ˆì‹œ)
     //    //ColorBlock colors = button.colors;
     //    //colors.normalColor = Color.white;
     //    //button.colors = colors;
     //}
 
-    // ÇÏÀÇ º¯°æ ¹öÆ°
+    // í•˜ì˜ ë³€ê²½ ë²„íŠ¼
     public void OnClickShowPreviousPants()
     {
         SoundManager._instance.PlaySound(Define.ch1ClothSweepVfx);
@@ -231,7 +231,7 @@ public class SelectCloth : MonoBehaviour
     }
 
 
-    // ½Å¹ß º¯°æ ¹öÆ°
+    // ì‹ ë°œ ë³€ê²½ ë²„íŠ¼
     public void OnClickShowPreviousShoes()
     {
         SoundManager._instance.PlaySound(Define.ch1ClothFootstepVfx);
@@ -254,16 +254,16 @@ public class SelectCloth : MonoBehaviour
         UpdateDisplay();
     }
 
-    // ¿Ï·á ¹öÆ°
-    // - ui button »ç¶óÁö°í
-    // - ´ë»ç Ãâ·Â
+    // ì™„ë£Œ ë²„íŠ¼
+    // - ui button ì‚¬ë¼ì§€ê³ 
+    // - ëŒ€ì‚¬ ì¶œë ¥
     public void OnClickSelectFinish()
     {
-        // UI ¹öÆ° ºñÈ°¼ºÈ­, ´ë»ç È°¼ºÈ­
+        // UI ë²„íŠ¼ ë¹„í™œì„±í™”, ëŒ€ì‚¬ í™œì„±í™”
         closetButtons.SetActive(false);
         textImg.SetActive(true);
 
-        // Á¡¼ö ³Ñ±â±â
+        // ì ìˆ˜ ë„˜ê¸°ê¸°
         ScoreMng.main.addScore(scoreTops[currentTopIndex], "Chapter1");
         ScoreMng.main.addScore(scoreAccessorys[currentAccessoryIndex], "Chapter1");
         ScoreMng.main.addScore(scorePants[currentPantsIndex], "Chapter1");
@@ -272,16 +272,16 @@ public class SelectCloth : MonoBehaviour
         Speech();
     }
 
-    // »ç¿øÁõ ±×·¦
+    // ì‚¬ì›ì¦ ê·¸ë©
     public void OnGrabIDCard()
     {
         Invoke(nameof(ChangeScene), 1f);
     }
 
-    // ¾À ÀüÈ¯
+    // ì”¬ ì „í™˜
     void ChangeScene()
     {
-        //Debug.Log("¾À ÀüÈ¯");
+        //Debug.Log("ì”¬ ì „í™˜");
         SceneManager.LoadScene("Chapter3");
     }
 }
