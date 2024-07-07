@@ -3794,6 +3794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: 710a05f3a5c801042ab2110b655a6e1c, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
@@ -7089,6 +7090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: fbc46b34e9936b04eb6a544e224ea858, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
@@ -8418,6 +8420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: 0a15f8b152ecfee4bbe25c140c8a8a1d, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
@@ -8777,6 +8780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: 28145e0e2f1d14547849be1e9d1cffe0, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
@@ -11271,6 +11275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: 4076a1b7859659e4b8185783eebffbab, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
@@ -14901,6 +14906,13 @@ MonoBehaviour:
   textImg: {fileID: 30831013}
   tmp: {fileID: 1772733}
   currentPersonIndex: 0
+  arr_answerSeat:
+  - A
+  - B
+  - C
+  - D
+  - E
+  arr_chairName: []
 --- !u!1001 &2047321665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15257,6 +15269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chairSO: {fileID: 11400000, guid: b00c41fa2d8b09c489b68d75793d2f7e, type: 2}
   pplObjs:
   - {fileID: 350701794}
   - {fileID: 94241691}
