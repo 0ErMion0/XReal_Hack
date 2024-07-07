@@ -1326,6 +1326,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
       insertIndex: -1
       addedObject: {fileID: 528754568}
+    - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 528754578}
   m_SourcePrefab: {fileID: 100100000, guid: 92162c258f5135e428817b64aa040b78, type: 3}
 --- !u!4 &219849109 stripped
 Transform:
@@ -1675,6 +1678,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4261067776084814045, guid: a2fa35ce8a966db41aa1253b18fdd426, type: 3}
   m_PrefabInstance: {fileID: 248997821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &252398922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 1194579321}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &255457261
 PrefabInstance:
@@ -2828,6 +2836,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4668535259003781473, guid: efe0626eda531c6428d2511c31948457, type: 3}
   m_PrefabInstance: {fileID: 367398172}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &381283886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 794279866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &398531413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3203,6 +3216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1097866565}
+    - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1097866575}
   m_SourcePrefab: {fileID: 100100000, guid: 92162c258f5135e428817b64aa040b78, type: 3}
 --- !u!4 &461555162 stripped
 Transform:
@@ -3213,6 +3229,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4722ea10d6a53d8458ceb66c799b6325, type: 3}
   m_PrefabInstance: {fileID: 835634103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &473562003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 1955603116}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &476412745
 PrefabInstance:
@@ -3620,7 +3641,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528754578}
+        m_TargetAssemblyTypeName: ChairSelector, Assembly-CSharp
+        m_MethodName: OnChairSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3749,6 +3782,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &528754578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528754558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pplObjs:
+  - {fileID: 350701794}
+  - {fileID: 94241691}
+  - {fileID: 1065212285}
+  - {fileID: 623507551}
+  - {fileID: 231080862}
+  headObj: {fileID: 381283886}
 --- !u!1001 &533571639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5096,6 +5148,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1974101041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &665863627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 1194805730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &678741234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5814,6 +5871,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4479350749386646048, guid: 0206d0f436174f24792099ca72654f50, type: 3}
   m_PrefabInstance: {fileID: 733215944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &756518569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 1435473105}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &762227012 stripped
 GameObject:
@@ -6874,7 +6936,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 886417977}
+        m_TargetAssemblyTypeName: ChairSelector, Assembly-CSharp
+        m_MethodName: OnChairSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -7015,7 +7089,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pplObjs: []
+  pplObjs:
+  - {fileID: 350701794}
+  - {fileID: 94241691}
+  - {fileID: 1065212285}
+  - {fileID: 623507551}
+  - {fileID: 231080862}
+  headObj: {fileID: 473562003}
 --- !u!1001 &893341054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8185,7 +8265,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1097866575}
+        m_TargetAssemblyTypeName: ChairSelector, Assembly-CSharp
+        m_MethodName: OnChairSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -8314,6 +8406,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1097866575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097866555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pplObjs:
+  - {fileID: 350701794}
+  - {fileID: 94241691}
+  - {fileID: 1065212285}
+  - {fileID: 623507551}
+  - {fileID: 231080862}
+  headObj: {fileID: 252398922}
 --- !u!1001 &1100918747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8672,6 +8783,7 @@ MonoBehaviour:
   - {fileID: 1065212285}
   - {fileID: 623507551}
   - {fileID: 231080862}
+  headObj: {fileID: 1912874972}
 --- !u!1001 &1110365614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11165,6 +11277,7 @@ MonoBehaviour:
   - {fileID: 1065212285}
   - {fileID: 623507551}
   - {fileID: 231080862}
+  headObj: {fileID: 665863627}
 --- !u!1 &1421277664
 GameObject:
   m_ObjectHideFlags: 0
@@ -13912,6 +14025,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+--- !u!1 &1912874972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 881a37a3ac7febb45940387055d41382, type: 3}
+  m_PrefabInstance: {fileID: 519495512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1944494541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14782,6 +14900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textImg: {fileID: 30831013}
   tmp: {fileID: 1772733}
+  currentPersonIndex: 0
 --- !u!1001 &2047321665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14921,6 +15040,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2064765125}
+    - targetCorrespondingSourceObject: {fileID: 2000420125523736556, guid: 92162c258f5135e428817b64aa040b78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2064765135}
   m_SourcePrefab: {fileID: 100100000, guid: 92162c258f5135e428817b64aa040b78, type: 3}
 --- !u!4 &2064765115 stripped
 Transform:
@@ -14982,7 +15104,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064765135}
+        m_TargetAssemblyTypeName: ChairSelector, Assembly-CSharp
+        m_MethodName: OnChairSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -15111,6 +15245,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2064765135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172380252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2447be46e3f016146b4467f943cdd428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pplObjs:
+  - {fileID: 350701794}
+  - {fileID: 94241691}
+  - {fileID: 1065212285}
+  - {fileID: 623507551}
+  - {fileID: 231080862}
+  headObj: {fileID: 756518569}
 --- !u!1 &2065897353
 GameObject:
   m_ObjectHideFlags: 0
