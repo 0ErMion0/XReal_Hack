@@ -2528,7 +2528,6 @@ MonoBehaviour:
   closetButtons: {fileID: 37774852}
   textImg: {fileID: 1251207121}
   idCard: {fileID: 91356177}
-  exmImg: {fileID: 793295414}
   displayTop: {fileID: 55359044}
   displayAccessory: {fileID: 115904212}
   displayPants: {fileID: 935576031}
@@ -2546,6 +2545,7 @@ MonoBehaviour:
   arg_shoes:
   - {fileID: 21300000, guid: ea3de5d8bf39f73498d0b3615b666542, type: 3}
   - {fileID: 21300000, guid: ceccfa9be03cad84b80f12ba2d37dda4, type: 3}
+  exmImg: {fileID: 793295414}
   tmp: {fileID: 2064636416}
 --- !u!4 &1380890474
 Transform:
