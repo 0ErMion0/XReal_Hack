@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chapter4Sys : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class Chapter4Sys : MonoBehaviour
         {
             ScoreMng.main.addScore(100,"Chapter4");
         }
-        Debug.Log("끝 씬이동");
+        SceneManager.LoadScene("Chapter6");
+
     }
 }

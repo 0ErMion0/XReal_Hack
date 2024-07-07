@@ -88,7 +88,7 @@ public class Chapter2Sys : MonoBehaviour
             ScoreMng.main.addScore(100, "Chapter3");
 
             // 씬 전환
-            //Invoke(nameof(ChangeScene), 3f);
+            Invoke(nameof(ChangeScene), 3f);
         }
         else if(isTriggerEnter&&!isClear)
         {
@@ -99,7 +99,7 @@ public class Chapter2Sys : MonoBehaviour
             //스코어 0
 
             // 씬 전환
-            //Invoke(nameof(ChangeScene), 3f);
+            Invoke(nameof(ChangeScene), 3f);
         }
         else if (!isTriggerEnter)
         {
@@ -111,7 +111,7 @@ public class Chapter2Sys : MonoBehaviour
             ScoreMng.main.addScore(50, "Chapter3");
 
             // 씬 전환
-            //Invoke(nameof(ChangeScene), 3f);
+            Invoke(nameof(ChangeScene), 3f);
         }
         // 씬 전환
         //Invoke(nameof(ChangeScene), 3f);
@@ -130,7 +130,7 @@ public class Chapter2Sys : MonoBehaviour
         directorObj.transform.LookAt(playerPos);
 
         // 씬 전환
-        //Invoke(nameof(ChangeScene), 3f);
+        Invoke(nameof(ChangeScene), 3f);
     }
 
     // 씬 전환
